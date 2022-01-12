@@ -1,16 +1,19 @@
 § Using Goutte with Lingueee German-English Dictionary
 
+## Install Goutte
+
+```bash
+composer fabpot/goutte
+```
+
 §§ Linguee German to English POST Request
 
-Below is the http request to translate the German word **nachlässig** from the German version of [Linguee](https://www.linguee.de/deutsch-englisch/search?source=auto&query=nachllässig):
-
+Below is the http request to translate the German word **nachlässig** using the German version of [Linguee](https://www.linguee.de/deutsch-englisch/search?source=auto&query=nachllässig):
 
 ```html
 https://www.linguee.de/deutsch-englisch/search?source=auto&query=nachlässig
 ```
-
-- **query** is the word to translate.
-
+We simply supply the value for **query**, the word to translate.
 
 ## Scrapping the Results
 
