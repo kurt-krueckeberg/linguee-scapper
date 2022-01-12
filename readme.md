@@ -1,6 +1,8 @@
-§ Using Goutte with Lingueee German-English Dictionary
+Using Goutte with Lingueee German-English Dictionary
+====================================================
 
-## Install Goutte
+Install Goutte
+--------------
 
 ```bash
 composer fabpot/goutte
@@ -15,7 +17,9 @@ https://www.linguee.de/deutsch-englisch/search?source=auto&query=nachlässig
 ```
 We simply supply the value for **query**, the word to translate.
 
-## Scrapping the Results
+
+Scrapping the Results
+---------------------
 
 See:
 
