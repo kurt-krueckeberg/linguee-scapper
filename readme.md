@@ -8,7 +8,8 @@ Install Goutte
 composer fabpot/goutte
 ```
 
-§§ Linguee German to English POST Request
+Linguee German to English POST Request
+--------------------------------------
 
 Below is the http request to translate the German word **nachlässig** using the German version of [Linguee](https://www.linguee.de/deutsch-englisch/search?source=auto&query=nachllässig):
 
