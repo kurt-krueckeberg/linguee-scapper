@@ -22,9 +22,17 @@ class LingueeScraper {
 
       $arr = $response->toArray();
 
-      $query = trim($arr['query'], ",");
+      $word = trim($arr['query'], ",");
 
-      echo $query . "\n";
+      echo $word . "\n";
+
+      $x = $arr['words'];
+
+      foreach($x as $y) {
+          print_r($y['translations']);
+	  echo "\n"; 
+      }
+
 
       // Process rest of subarray 
 
