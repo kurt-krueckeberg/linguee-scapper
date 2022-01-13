@@ -28,14 +28,20 @@ class LingueeScraper {
 
       $x = $arr['words'];
 
+      $trans_nd_exs = array();
+
       foreach($x as $y) {
-          print_r($y['translations']);
-	  echo "\n"; 
+
+	  $translation[] = $y['translations']['term'];
+
+	  // TODO: The examples (and there can be more than one) are paired with the specific translation--on the line above.
+	  foreach($y['translations']['examples'] as $example) {
+              
+	      // Extract 'from' -- the German example sentence -- and 'to' -- its English translation.
+	      $example['from'];
+	      $example['to'];
+	  }
       }
-
-
-      // Process rest of subarray 
-
   }
 
   public function scrape_words(array $words) // or \Ds\Vector
