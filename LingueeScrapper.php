@@ -1,55 +1,44 @@
 <?php
 include 'vendor/autoload.php';
 
-use Goutte\Client;
+use Einenlum\LingueeApi\Factory;
 
 class LingeeScraper {
 
   private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
-  private $client;
+  private $linguee;
 
 
   public function __construct()
   {
-     $this->client = new Client();
-
+     $this->linguee = Factory::create(); 
   }
 
   public function scrape_word(string $word)
   {
+      $response = $linguee->translate($word, 'ger', 'eng');
+
+      $query = trim($subarray['query'], ",");
+
+      // Process rest of subarray 
 
   }
 
   public function scrape_words(array $words) // or \Ds\Vector
-  {
+  { 
 
   }
-
-
 }
 
-function translate(string $word)
-{
-	
-  $response = $linguee->translate($word, 'ger', 'eng');
 
- // $response is an instance of Einenlum\LingueeApi\Response\DTO\Response
-  // $arr = $response->toArray();
-  $arr = $response->toArray();
-
-  foreach($arr as $subarr) {
-    
-      $query = trim($subarray['query'], ",");
-
-      // Process rest of subarray 
-  }	  
-}
 
 
 // main loop
+//
+   $scraper = new LingueeScraper();
 
-foreach ($words as $word) {
-
-	translate($word);
-}
+   foreach ($words as $word) {
+   
+	   $scrapper->scrape($word);
+   }
 
