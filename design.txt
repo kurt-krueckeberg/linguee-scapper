@@ -10,3 +10,5 @@ Results are a Top-level associative array with these keys:
 
 - 'examples' = This doesn't seem to  sentences 
 
+TDO:
+Compare the code with the actual linguee results for each word in words.txt.

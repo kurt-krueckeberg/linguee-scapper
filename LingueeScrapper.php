@@ -20,28 +20,31 @@ class LingueeScraper {
   {
       $response = $this->linguee->translate($word, 'ger', 'eng');
 
-      $arr = $response->toArray();
+      $a = $response->toArray();
 
-      $word = trim($arr['query'], ",");
+      $word = trim($a['query'], ",");
 
-      echo $word . "\n";
+      echo "The word being translated is: " . $word . "\n";
 
-      $x = $arr['words'];
+      //TODO: What is $x? And whjat is $y below?
 
-      $trans_nd_exs = array();
+      $x = $a['words']; // $x has the translations and the examples associated with each of the individual translations.
 
-      foreach($x as $y) {
+      foreach($x as $y) { // $y has?
 
-	  $translation[] = $y['translations']['term'];
-
-	  // TODO: The examples (and there can be more than one) are paired with the specific translation--on the line above.
-	  foreach($y['translations']['examples'] as $example) {
+	  // The examples (and there can be more than one) are paired with the specific translation--on the line above.
+	  foreach($y['translations'] as $trans) {
               
-	      // Extract 'from' -- the German example sentence -- and 'to' -- its English translation.
-	      $example['from'];
-	      $example['to'];
+              echo "\ttranslation = " . $trans['term'] . "\n";
+
+	      foreach($trans['examples'] as $example) {
+
+		  echo "\t\tfrom: " . $example['from'] . "\n";
+		  echo "\t\tto: " . $example['to'] . "\n";
+	      }
 	  }
       }
+      echo "==================\n";
   }
 
   public function scrape_words(array $words) // or \Ds\Vector
