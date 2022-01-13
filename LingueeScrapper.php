@@ -26,7 +26,11 @@ class LingueeScraper {
 
       echo "The word being translated is: " . $word . "\n";
 
-      //TODO: What is $x? And whjat is $y below?
+      /*
+       * TODO: What is $x? And what is $y below?
+       * Q: Simply do print_r($x) and print_r($y)
+       * Compare results with Linguee.com output.
+       */ 
 
       $x = $a['words']; // $x has the translations and the examples associated with each of the individual translations.
 
