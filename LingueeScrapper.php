@@ -1,9 +1,11 @@
+#!/usr/bin/env php
 <?php
 include 'vendor/autoload.php';
 
 use Einenlum\LingueeApi\Factory;
+use \SplFileObject as File;
 
-class LingeeScraper {
+class LingueeScraper {
 
   private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
   private $linguee;
@@ -14,11 +16,15 @@ class LingeeScraper {
      $this->linguee = Factory::create(); 
   }
 
-  public function scrape_word(string $word)
+  public function scrape(string $word)
   {
-      $response = $linguee->translate($word, 'ger', 'eng');
+      $response = $this->linguee->translate($word, 'ger', 'eng');
 
-      $query = trim($subarray['query'], ",");
+      $arr = $response->toArray();
+
+      $query = trim($arr['query'], ",");
+
+      echo $query . "\n";
 
       // Process rest of subarray 
 
@@ -26,19 +32,29 @@ class LingeeScraper {
 
   public function scrape_words(array $words) // or \Ds\Vector
   { 
-
+    foreach ($words as $word) {
+      
+       $this->scrape($word);
+    }
   }
 }
 
 
-
-
 // main loop
 //
-   $scraper = new LingueeScraper();
+if ($argc == 1) {
+  echo "Enter: -f 'file name'\n";
+  return;
+}
 
-   foreach ($words as $word) {
+ $file = new File($argv[2], "r");
+
+ $scraper = new LingueeScraper();
+
+ $words = array('vernachlässigen', 'verändern');
+
+ foreach ($words as $word) {
    
-	   $scrapper->scrape($word);
-   }
+    $scraper->scrape($word);
+ }
 
