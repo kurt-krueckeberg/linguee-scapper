@@ -27,3 +27,29 @@ class LingeeScraper {
 
 
 }
+
+function translate(string $word)
+{
+	
+  $response = $linguee->translate($word, 'ger', 'eng');
+
+ // $response is an instance of Einenlum\LingueeApi\Response\DTO\Response
+  // $arr = $response->toArray();
+  $arr = $response->toArray();
+
+  foreach($arr as $subarr) {
+    
+      $query = trim($subarray['query'], ",");
+
+      // Process rest of subarray 
+  }	  
+}
+
+
+// main loop
+
+foreach ($words as $word) {
+
+	translate($word);
+}
+
