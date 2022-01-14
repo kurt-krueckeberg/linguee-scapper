@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 include 'vendor/autoload.php';
 
@@ -22,33 +21,38 @@ class LingueeScraper {
 
       $a = $response->toArray();
 
-      $word = trim($a['query'], ",");
+      $german_word = trim($a['query'], ",");
 
-      echo "The word being translated is: " . $word . "\n";
+      echo "The word being translated is: " . $german_word . "\n";
 
-      /*
-       * TODO: What is $x? And what is $y below?
-       * Q: Simply do print_r($x) and print_r($y)
-       * Compare results with Linguee.com output.
-       */ 
 
-      $x = $a['words']; // $x has the translations and the examples associated with each of the individual translations.
+      $x = $a['words']; // $x has the translations and their assocaiated examples.
 
-      foreach($x as $y) { // $y has?
+      foreach($x as $y) { 
 
-	  // The examples (and there can be more than one) are paired with the specific translation--on the line above.
+	  // We loop over the invidual translations and their associated examples in German (and the example's English Translation). There can be more than one Geraman example sentence  (and its English translation) per translation.
 	  foreach($y['translations'] as $trans) {
               
-              echo "\ttranslation = " . $trans['term'] . "\n";
+              // TODO: Decide how we want to pair the elements
+              /*
+               Idea: 
+               Use \Ds\Hashtable\ that contains vectors
+              The German word has one or translations. Each translation for the German word has one or more German example sentences and their English translations. 
+               $output['vernachlässigen'] => { {translation1 {Associated Example1, Example2, ...}, {translation2 {Associated Example1, Example2, ...}, ...{translationn {Associated Example1, Example2, ...} };
+               * 
+               * 
+               */
+                      
+              $a_translation = $trans['term'];
 
 	      foreach($trans['examples'] as $example) {
 
-		  echo "\t\tfrom: " . $example['from'] . "\n";
-		  echo "\t\tto: " . $example['to'] . "\n";
+		  $germ_example = $example['from'];
+		  $its_translation = $example['to'];
 	      }
 	  }
       }
-      echo "==================\n";
+      
   }
 
   public function scrape_words(array $words) // or \Ds\Vector

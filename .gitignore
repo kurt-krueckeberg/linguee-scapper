@@ -1,3 +1,4 @@
 .swp
 vendor/
 composer*
+/nbproject/private/
