@@ -1,8 +1,10 @@
+#!/usr/bin/env php
 <?php
 include 'vendor/autoload.php';
 
 use Einenlum\LingueeApi\Factory;
 use \SplFileObject as File;
+use \Ds\Vector as vector;
 
 class LingueeScraper {
 
@@ -30,7 +32,7 @@ class LingueeScraper {
 
       foreach($x as $y) { 
 
-	  // We loop over the invidual translations and their associated examples in German (and the example's English Translation). There can be more than one Geraman example sentence  (and its English translation) per translation.
+	  // We loop over the invidual definitions and their associated examples in German (and the example's English Translation). There can be more than one Geraman example sentence  (and its English translation) per translation.
 	  foreach($y['translations'] as $trans) {
               
               // TODO: Decide how we want to pair the elements
@@ -43,11 +45,12 @@ class LingueeScraper {
                * 
                */
                       
-              $a_translation = $trans['term'];
+	      $word->addChild( $dom->createElement('definition', $trans['term']);
 
 	      foreach($trans['examples'] as $example) {
 
-		  $germ_example = $example['from'];
+                   $word->appendChild( $dom->createElement('examples');
+		  add$germ_example = $example['from'];
 		  $its_translation = $example['to'];
 	      }
 	  }

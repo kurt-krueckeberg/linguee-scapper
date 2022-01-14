@@ -12,9 +12,68 @@ Results are a Top-level associative array with these keys:
 
 TODO:
 
-The German word has one or translations. Each translation for the German word has one or more German example sentences and their English translations. 
-$output['vernachlässigen'] => { {translation1 {Associated Example1, Example2, ...}, {translation2 {Associated Example1, Example2, ...}, ...{translationn {Associated Example1, Example2, ...} };
+Output both an XML file and a php config file
 
-Idea: 
-Use \Ds\Hashtable\ that contains vectors
+XML format:
+
+words
+   word - the German word
+      <translations> - All its translations and their associated sentences
+         <translation>definition here
+         </translation>
+         <examples>
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            ...
+         </examples>
+         <translation>definition here
+         </translation>
+         <examples>
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            ...
+  word - the German word
+      <translations> - All its translations and their associated sentences
+         <translation>definition here
+         </translation>
+         <examples>
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            ...
+         </examples>
+         <translation>definition here
+         </translation>
+         <examples>
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            <sentence>German Sentence here
+            </sentence>
+            <translation>English translation here
+            </translation> 
+            ...
+
+The German word has one or translations. Each translation for the German word has one or more German example sentences and their English translations. 
+vernachlässigen => { {translation1 {Associated Example1, Example2, ...}, {translation2 {Associated Example1, Example2, ...}, ...{translationn {Associated Example1, Example2, ...} };
+
+Implement using \Ds\Vector, as a Vector of vectors. Add a write function.
               
