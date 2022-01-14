@@ -10,11 +10,18 @@ class LingueeScraper {
 
   private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
   private $linguee;
-
+  private $dom;
+  private $root;
 
   public function __construct()
   {
      $this->linguee = Factory::create(); 
+
+     $dom = new DOMDocument('1.0','UTF-8');
+     $dom->formatOutput = true;
+   
+     $root = $dom->createElement('dict_entries');
+     $dom->appendChild($root);
   }
 
   public function scrape(string $word)
@@ -23,14 +30,19 @@ class LingueeScraper {
 
       $a = $response->toArray();
 
-      $german_word = trim($a['query'], ",");
+      $dict_entry = $this->dom->createElement('dict_entry');
+      $this->root->addElement($dict_entry);
 
-      echo "The word being translated is: " . $german_word . "\n";
-
+      $this->root->createElement('word', trim($a['query'])); // $german_word = trim($a['query'], ",");
+      $dict_entry->addElement($dict_entry);
 
       $x = $a['words']; // $x has the translations and their assocaiated examples.
 
       foreach($x as $y) { 
+
+          $transs = $this->dom->createElement('translations');
+
+          $dict_entry->addElement($transs);
 
 	  // We loop over the invidual definitions and their associated examples in German (and the example's English Translation). There can be more than one Geraman example sentence  (and its English translation) per translation.
 	  foreach($y['translations'] as $trans) {
@@ -44,8 +56,8 @@ class LingueeScraper {
                * 
                * 
                */
-                      
-	      $word->addChild( $dom->createElement('definition', $trans['term']);
+              $trans = $this->dom->createElement('translation', $trans['term']);
+	      $transs->addChild($trans);
 
 	      foreach($trans['examples'] as $example) {
 
