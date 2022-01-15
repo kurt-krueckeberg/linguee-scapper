@@ -16,8 +16,8 @@ Output both an XML file and a php config file
 
 XML format:
 
-<dict_entries>
-   <dict_entry>
+<results>
+   <result>
       <word>German word</word>
       <translations> - All its translations and their associated sentences
          <translation>definition1 here</translation>
@@ -37,8 +37,8 @@ XML format:
             ...
          </examples>
       </translations>
-   </dict_entry>
-   <dict_entry>
+   </result>
+   <result>
       <word>German word2</word>
       <translations> - All its translations and their associated sentences
          <translation>definition1 here</translation>
@@ -58,8 +58,8 @@ XML format:
             ...
          </examples>
       </translations>
-  </dict_entry>
-</dict_entries>
+  </result>
+</results>
 
 The German word has one or translations. Each translation for the German word has one or more German example sentences and their English translations. 
 vernachlässigen => { {translation1 {Associated Example1, Example2, ...}, {translation2 {Associated Example1, Example2, ...}, ...{translationn {Associated Example1, Example2, ...} };
