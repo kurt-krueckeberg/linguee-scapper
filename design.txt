@@ -75,9 +75,3 @@ XML format:
   </result>
   </result>
 </results>
-
-The German word has one or translations. Each translation for the German word has one or more German example sentences and their English translations. 
-vernachlässigen => { {translation1 {Associated Example1, Example2, ...}, {translation2 {Associated Example1, Example2, ...}, ...{translationn {Associated Example1, Example2, ...} };
-
-Implement using \Ds\Vector, as a Vector of vectors. Add a write function.
-              
