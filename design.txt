@@ -10,54 +10,61 @@ Results are a Top-level associative array with these keys:
 
 - 'examples' = This doesn't seem to  sentences 
 
-TODO:
-
-Output both an XML file and a php config file
-
 XML format:
 
 <results>
+  <L2_language>German</L2_language>
+  <L1_language>English</L1_language>
    <result>
       <word>German word</word>
       <translations> - All its translations and their associated sentences
          <translation>definition1 here</translation>
-         <examples>
-            <german>German Sample sentence1 here</german>
-            <english>German Sentence here</english>
-            <german>German Sample sentence2 here</german>
-            <english>German Sentence here</english>
-            ...
-         </examples>
+            <examples>
+               <example>
+                  <german>German Sample sentence1 here</german>
+                  <english>German Sentence here</english>
+                  <german>German Sample sentence2 here</german>
+                  <english>German Sentence here</english>
+               </example> 
+               ...
+            </examples>
          <translation>definition2 here</translation>
-         <examples>
-            <german>German Sample sentence1 here</german>
-            <english>German Sentence here</english>
-            <german>German Sample sentence2 here</german>
-            <english>German Sentence here</english>
-            ...
-         </examples>
+             <examples>
+                 <example>
+                  <german>German Sample sentence1 here</german>
+                  <english>German Sentence here</english>
+                  <german>German Sample sentence2 here</german>
+                  <english>German Sentence here</english>
+                 </example> 
+                  ...
+             </examples>
       </translations>
    </result>
    <result>
       <word>German word2</word>
       <translations> - All its translations and their associated sentences
          <translation>definition1 here</translation>
-         <examples>
-            <german>German Sample sentence1 here</german>
-            <english>German Sentence here</english>
-            <german>German Sample sentence2 here</german>
-            <english>German Sentence here</english>
-            ...
-         </examples>
+            <examples>
+               <example>
+                  <german>German Sample sentence1 here</german>
+                  <english>German Sentence here</english>
+                  <german>German Sample sentence2 here</german>
+                  <english>German Sentence here</english>
+               </example> 
+               ...
+            </examples>
          <translation>definition2 here</translation>
-         <examples>
-            <german>German Sample sentence1 here</german>
-            <english>German Sentence here</english>
-            <german>German Sample sentence2 here</german>
-            <english>German Sentence here</english>
-            ...
-         </examples>
+             <examples>
+                 <example>
+                  <german>German Sample sentence1 here</german>
+                  <english>German Sentence here</english>
+                  <german>German Sample sentence2 here</german>
+                  <english>German Sentence here</english>
+                 </example> 
+                  ...
+             </examples>
       </translations>
+   <result>
   </result>
 </results>
 
