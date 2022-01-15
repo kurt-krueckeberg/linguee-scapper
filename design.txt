@@ -17,7 +17,7 @@ XML format:
   <L1_language>English</L1_language>
    <result>
       <word>German word</word>
-      <translations> - All its translations and their associated sentences
+      <translations>
          <translation>definition1 here</translation>
             <examples>
                <example>
@@ -42,7 +42,7 @@ XML format:
    </result>
    <result>
       <word>German word2</word>
-      <translations> - All its translations and their associated sentences
+      <translations>
          <translation>definition1 here</translation>
             <examples>
                <example>
