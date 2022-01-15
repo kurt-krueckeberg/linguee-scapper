@@ -8,6 +8,29 @@ use \Ds\Vector as vector;
 
 class LingueeScraper {
 
+static private $skel = <<<EOS
+<?xml version="1.0" encoding="UTF-8"?>
+<results>
+  <L2_language>German</L2_language>
+  <L1_language>English</L1_language>
+   <result>
+      <word></word>
+      <translations>
+         <translation>
+           <definition></defintion>
+           <examples>
+             <example>
+               <L2_sentence></L2_sentence>
+               <L1_translation></L1_translation>
+             </example> 
+          </examples>
+        </translation>
+      </translations>
+   </result>
+<results>
+EOS;
+
+
   private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
   private $linguee;
   private $dom;
@@ -17,11 +40,17 @@ class LingueeScraper {
   {
      $this->linguee = Factory::create(); 
 
-     $dom = new DOMDocument('1.0','UTF-8');
+     $dom = new DOMDocument('1.0','UTF-8'); // TODO: USe XML and then query it?
+     $this->dom= DOMDocument::loadXML(self::$skel);
      $dom->formatOutput = true;
    
      $root = $dom->createElement('dict_entries');
      $dom->appendChild($root);
+  }
+
+  public function __destruct()
+  {
+	$this->dom->saveXML();
   }
 
   public function scrape(string $word)
