@@ -4,7 +4,6 @@ include 'vendor/autoload.php';
 
 use Einenlum\LingueeApi\Factory;
 use \SplFileObject as File;
-use \Ds\Vector as vector;
 
 class LingueeScraper {
 
@@ -13,11 +12,20 @@ static private $skel = <<<EOS
 <results>
   <L2_language>German</L2_language>
   <L1_language>English</L1_language>
-   <result>
-      <word></word>
+  <result>
+      <word>vernachlässigen</word>
       <translations>
-         <translation>
-           <definition></defintion>
+        <translation>
+		<definition>to neglect</definition>
+           <examples>
+             <example>
+               <L2_sentence>Wenn er viel Arbeit hat, vernachlässigt er sein Privatleben.</L2_sentence>
+               <L1_translation>When busy at work, he neglects his private life.</L1_translation>
+             </example> 
+          </examples>
+        </translation>
+        <translation>
+           <definition>to ignore</definition>
            <examples>
              <example>
                <L2_sentence></L2_sentence>
@@ -26,24 +34,25 @@ static private $skel = <<<EOS
           </examples>
         </translation>
       </translations>
-   </result>
-<results>
+  </result>
+</results>
 EOS;
-
 
   private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
   private $linguee;
 
   private $xml;
   private $word;
+  private $fname;
 
   public function __construct(string $xml_name)
    {
-     $this->xml_name = $sml_name;	  
+     $this->fname = $sml_fname;	  
      $this->linguee = Factory::create(); 
 
-     $this->xml = new SimpleXML(self::$skel);
-     $this->word = $this->xml->results->result->word; // $this->xml->xpath('/results/result/word');
+     $this->xml = new SimpleXMLElement(self::$skel);
+
+     //$this->word = $this->xml->results->result->word; // $this->xml->xpath('/results/result/word');
    
   }
 
