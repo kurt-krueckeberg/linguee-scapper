@@ -43,7 +43,7 @@ EOS;
      $this->linguee = Factory::create(); 
 
      $this->xml = new SimpleXML(self::$skel);
-     $this->word = $this->xml->xpath('/results/result/word');
+     $this->word = $this->xml->results->result->word; // $this->xml->xpath('/results/result/word');
    
   }
 

@@ -1,12 +1,19 @@
 # SimpleXML
 
-Edit this with Gedit
+XML Guides:
+- W3Schools [XML Tutorial](https://www.w3schools.com/xml/default.asp)
 
-TODO:
-- Look into SimpleXML and DOMDocument interoperability. Maybe we can insert the XML node value/text using a DOMDocument call?
-- Read you on SimpleXML and DOM in general at w3schools.com
-- Good [code examples](https://way2tutorial.com/xml/php-generate-xml.php)
+- W3Schools [XML DOM Tutorial](https://www.w3schools.com/xml/dom_intro.asp)
 
+- W3Schools general [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp)
+
+- W3Schools general [PHP XML Tutorial](https://www.w3schools.com/php/php_xml_parsers.asp)
+
+- [SimpleXML Basic USage](https://www.php.net/manual/en/simplexml.examples-basic.php)
+  **Example #11** shows
+  > PHP has a mechanism to convert XML nodes between SimpleXML and DOM formats. This example shows how one might change a DOM element to SimpleXML. 
+
+- [Code examples](https://way2tutorial.com/xml/php-generate-xml.php) of creating XML using SimpleXML and DOMDocument.
 
 ## simmple_xml Usage
 
