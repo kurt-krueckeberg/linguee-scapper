@@ -1,11 +1,21 @@
 # SimpleXML
 
+Edit this with Gedit
+
+TODO:
+- Look into SimpleXML and DOMDocument interoperability. Maybe we can insert the XML node value/text using a DOMDocument call?
+- Read you on SimpleXML and DOM in general at w3schools.com
+- Good [code examples](https://way2tutorial.com/xml/php-generate-xml.php)
+
+
 ## simmple_xml Usage
 
 [PHP SimpleXML Parser](https://www.w3schools.com/Php/php_xml_simplexml_read.asp)
 
 
 ## simple_xml::addElement()
+
+`simple_xml::addElement()` self-documenting example
 
 
 ```php
@@ -78,7 +88,7 @@ The above example will output something similar to:
 
 ## SimpleXMLElement::xpath
 
-wth query
+XPath SimpleXML query
 
 ```php
 

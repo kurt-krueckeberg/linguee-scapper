@@ -1,16 +1,5 @@
-Results are a Top-level associative array with these keys:
+XML output format:
 
-- 'query' = The Geramn word for which we request translations and example sentences.
-
-- 'words' = The actual results, a numerically-indexed array of that contains associative subarrays...whose most important key is 
-
-  - 'translations'...which is the key (to single-element numeric array) whose important keys are:
-     
-    - 'term' which is a single translation
-
-- 'examples' = This doesn't seem to  sentences 
-
-XML format:
 <?xml version="1.0" encoding="UTF-8"?>
 <results>
   <L2_language>German</L2_language>
