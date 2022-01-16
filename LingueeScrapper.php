@@ -33,24 +33,23 @@ EOS;
 
   private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
   private $linguee;
-  private $dom;
-  private $root;
 
-  public function __construct()
-  {
+  private $xml;
+  private $word;
+
+  public function __construct(string $xml_name)
+   {
+     $this->xml_name = $sml_name;	  
      $this->linguee = Factory::create(); 
 
-     $dom = new DOMDocument('1.0','UTF-8'); // TODO: USe XML and then query it?
-     $this->dom= DOMDocument::loadXML(self::$skel);
-     $dom->formatOutput = true;
+     $this->xml = new SimpleXML(self::$skel);
+     $this->word = $this->xml->xpath('/results/result/word');
    
-     $root = $dom->createElement('dict_entries');
-     $dom->appendChild($root);
   }
 
   public function __destruct()
   {
-	$this->dom->saveXML();
+	$this->asXML($this->xml_name);
   }
 
   public function scrape(string $word)
@@ -59,10 +58,10 @@ EOS;
 
       $a = $response->toArray();
 
-      $dict_entry = $this->dom->createElement('dict_entry');
-      $this->root->addElement($dict_entry);
+      // -- $german_Word = trim($a['query'])); // TODO: This is also in the input file. So we can ignore it--righ?
 
-      $this->root->createElement('word', trim($a['query'])); // $german_word = trim($a['query'], ",");
+      $this->word = $this->xml->xpath('/results/result/word'); //???
+      
       $dict_entry->addElement($dict_entry);
 
       $x = $a['words']; // $x has the translations and their assocaiated examples.
