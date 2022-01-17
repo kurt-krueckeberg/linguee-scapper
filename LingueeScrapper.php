@@ -19,8 +19,8 @@ static private $skel = <<<EOS
 		<definition>to neglect</definition>
            <examples>
              <example>
-               <L2_sentence>Wenn er viel Arbeit hat, vernachlässigt er sein Privatleben.</L2_sentence>
-               <L1_translation>When busy at work, he neglects his private life.</L1_translation>
+               <L2_sentence></L2_sentence>
+               <L1_translation></L1_translation>
              </example> 
           </examples>
         </translation>
