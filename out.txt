@@ -1,0 +1,747 @@
+Array
+(
+    [query] => desert
+    [words] => Array
+        (
+            [0] => Array
+                (
+                    [term] => desert
+                    [additionalInformation] => 
+                    [type] => noun
+                    [audio] => https://www.linguee.com/mp3/EN_US/3f/3fd6b6210e33bb046e69f256a138e28d-101
+                    [translations] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [term] => Wste
+                                    [audio] => https://www.linguee.com/mp3/DE/c4/c4e37c83329756bbd9c02791bd76199d-104
+                                    [type] => f
+                                    [alternatives] => Array
+                                        (
+                                        )
+
+                                    [examples] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [from] => In the desert, water is a scarce resource.
+                                                    [to] => In der Wste ist Wasser eine knappe Ressource.
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [from] => The desert is arid with sparse vegetation.
+                                                    [to] => Die Wste ist trocken mit karger Vegetation.
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [term] => desert
+                    [additionalInformation] => 
+                    [type] => adjective
+                    [audio] => https://www.linguee.com/mp3/EN_US/3f/3fd6b6210e33bb046e69f256a138e28d-300
+                    [translations] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [term] => wst
+                                    [audio] => https://www.linguee.com/mp3/DE/1c/1cb563d1405f4092dd6abc05456ca5b9-300
+                                    [type] => adj
+                                    [alternatives] => Array
+                                        (
+                                        )
+
+                                    [examples] => Array
+                                        (
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [term] => desert
+                    [additionalInformation] => 
+                    [type] => verb
+                    [audio] => https://www.linguee.com/mp3/EN_US/3f/3fd6b6210e33bb046e69f256a138e28d-200
+                    [translations] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [term] => desertieren
+                                    [audio] => https://www.linguee.com/mp3/DE/c3/c39c3bdec7b4b5bd85fcb745a2798347-202
+                                    [type] => v
+                                    [alternatives] => Array
+                                        (
+                                        )
+
+                                    [examples] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [from] => The soldiers deserted as defeat became inevitable.
+                                                    [to] => Die Soldaten desertierten, als eine Niederlage unausweichlich wurde.
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [examples] => Array
+        (
+            [0] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert island
+                            [type] => n
+                            [audio] => https://www.linguee.com/mp3/EN_US/f2/f240adac703a912732e12ffbb21dec8f-100
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wsteninsel
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert rose
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenrose
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert dunes
+                            [type] => pl
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstendnen
+                                    [type] => pl
+                                )
+
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => service desert
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Servicewste
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => barren desert
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => unfruchtbare Wste
+                                    [type] => f
+                                )
+
+                            [1] => Array
+                                (
+                                    [content] => de Wste
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert environment
+                            [type] => n
+                            [audio] => https://www.linguee.com/mp3/EN_UK/4f/4fd2fbb34bc07f1b18415585eb9f3767-100
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenumgebung
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert terrain
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenterrain
+                                    [type] => nt
+                                )
+
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => rocky desert
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => felsige Wstenlandschaft
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [8] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => Negev desert
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wste Negev
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [9] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert region
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenregion
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [10] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert country
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenstaat
+                                    [type] => m
+                                )
+
+                        )
+
+                )
+
+            [11] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => open desert
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => offene Wste
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [12] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert areas
+                            [type] => pl
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstengebiete
+                                    [type] => pl
+                                )
+
+                        )
+
+                )
+
+            [13] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert architecture
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wsten-Architektur
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [14] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert lynx
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenluchs
+                                    [type] => m
+                                )
+
+                        )
+
+                )
+
+            [15] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert coast
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenkste
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [16] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert vegetation
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenvegetation
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [17] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert mouse
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenmaus
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [18] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert ground
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenboden
+                                    [type] => m
+                                )
+
+                        )
+
+                )
+
+            [19] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert to the enemy
+                            [type] => v
+                            [audio] => https://www.linguee.com/mp3/EN_UK/a2/a2f1c88946632af7e4715e87f492d66f-200
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => zum Feind berlaufen
+                                    [type] => v
+                                )
+
+                        )
+
+                )
+
+            [20] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert from the army
+                            [type] => v
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => von der Armee desertieren
+                                    [type] => v
+                                )
+
+                        )
+
+                )
+
+            [21] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert location
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenort
+                                    [type] => m
+                                )
+
+                        )
+
+                )
+
+            [22] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert plant
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenpflanze
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [23] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert surface
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenflche
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [24] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert storm
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstensturm
+                                    [type] => m
+                                )
+
+                        )
+
+                )
+
+            [25] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => high-altitude desert
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Hochwste
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [26] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert planet
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenplanet
+                                    [type] => m
+                                )
+
+                        )
+
+                )
+
+            [27] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert-like
+                            [type] => adj
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => wstenartig
+                                    [type] => adj
+                                )
+
+                        )
+
+                )
+
+            [28] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert area
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenflche
+                                    [type] => f
+                                )
+
+                        )
+
+                )
+
+            [29] => Array
+                (
+                    [from] => Array
+                        (
+                            [content] => desert emirate
+                            [type] => n
+                            [audio] => 
+                        )
+
+                    [tos] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [content] => Wstenemirat
+                                    [type] => nt
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
