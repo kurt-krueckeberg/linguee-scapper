@@ -70,7 +70,7 @@ EOS;
 
       $resp = $response->toArray();
 
-      $result = $this->xml->results->addChild('result');
+      $result = $this->xml->results[0]->addChild('result');
       var_dump($result);
 
       $result->addChild('word', trim($resp['query'])); 
