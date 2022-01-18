@@ -5,7 +5,7 @@ use \SplFileObject as File;
 
 include 'vendor/autoload.php';
 /*
- * <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <results>
   <L2_language>German</L2_language>
   <L1_language>English</L1_language>
@@ -13,7 +13,7 @@ include 'vendor/autoload.php';
       <word>vernachlässigen</word>
       <translations>
         <translation>
-		<definition>to neglect</definition>
+	   <definition>to neglect</definition>
            <examples>
              <example>
                <L2_sentence></L2_sentence>
@@ -45,62 +45,54 @@ static private $skel = <<<EOS
 </results>
 EOS;
 
-  private static $url = 'https://www.linguee.de/deutsch-englisch/search?source=auto&query=';
   private $linguee;
 
   private $xml;
-  private $word;
-  private $fname;
+  private $index;
 
   public function __construct()
   {
      $this->linguee = Factory::create(); 
 
      $this->xml = new SimpleXMLElement(self::$skel);
+     $this->index = 0;
   }
 
-  public function __destruct()
-  {
-	$this->asXML($this->xml_name);
-  }
-
-  public function scrape(string $word)
+  function scrape(string $word)
   {
       $response = $this->linguee->translate($word, 'ger', 'eng');
-
+   
       $resp = $response->toArray();
-
-      $result = $this->xml->results[0]->addChild('result');
-      var_dump($result);
-
-      $result->addChild('word', trim($resp['query'])); 
-
-      $translations = $result->addChild('translations');
-
-      foreach($resp['words'] as $y) {  // $y is a translation with its associated sample sentences. There can be serveral translations, thus the loop.
-
-          $translation  = $translations->addChild('translation');
-
-	  // We loop over the invidual definitions and their associated examples in German (and the example's English Translation). There can be more than one Geraman example sentence  (and its English translation) per translation.
-	  foreach($y['translations'] as $trans) {
-		  
-	      $translation->addChild('definition', $trans['term']);
-	      $examples = $translation->addChild('examples');
-	      continue;
-
-	      foreach($trans['examples'] as $example) {
-
-		  // TODO: Don't we need to determine if the example has non-empyt sentences?     
-                  $example = $examples->addChild('example');
-		  $example->addChild('L2_sentence', $example['from']);
-		  $example->addChild('L1_sentence', $example['to']);
-	      }
-	  }
-      }
+   
+      $result = $xml->addChild('result'); 
       
+      $result->addChild('word', trim($resp['query']));
+   
+      $translations = $result->addChild('translations');
+   
+      foreach($resp['words'] as $y) {  // $y is a translation with its associated sample sentences. There can be serveral translations, thus the loop.
+      
+          $tran = $translations->addChild('translation');
+      
+          // We loop over the invidual definitions and their associated examples in German (and the example's English Translation). There can be more than one Geraman example sentence  (and its English translation) per translation.
+          foreach($y['translations'] as $t) {
+  	        
+              $tran->addChild('definition', $t['term']);
+      
+              $examples = $tran->addChild('examples');
+      
+              foreach($t['examples'] as $e_) {
+      
+                  $ex = $examples->addChild('example');
+      
+  	        $ex->addChild('L2_sentence', $e_['from']);
+  	        $ex->addChild('L1_sentence', $e_['to']);
+              }
+          }
+      }
   }
 
-  public function scrape_words(array $words) // or \Ds\Vector
+  public function scrape_words(array $words) 
   { 
     foreach ($words as $word) {
       
