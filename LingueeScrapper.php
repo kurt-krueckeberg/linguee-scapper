@@ -58,7 +58,7 @@ EOS;
      $this->index = 0;
   }
 
-  function scrape(string $word)
+  public function scrape(string $word)
   {
       $response = $this->linguee->translate($word, 'ger', 'eng');
    
@@ -91,9 +91,9 @@ EOS;
           }
       }
   }
-  function print()
+  public function print()
   {
-     echo $this->xml;
+     echo $this->xml->asXML();
   }
 }
 

@@ -10,7 +10,7 @@ include "LingueeScrapper.php";
 
 // main loop
  $scraper = new LingueeScraper();
-/*
+
 $words = array(
  "treten",
  "behandeln",
@@ -32,9 +32,6 @@ $words = array(
  "hinausschießen",
  "vernachlässigen",
  "verwüsten");
- */
-
-$words = array("treten");
 
  foreach ($words as $word) {
 
@@ -43,5 +40,5 @@ $words = array("treten");
     $scraper->scrape($word);
  }
 
- $scrapper->print();
+ $scraper->print();
 
