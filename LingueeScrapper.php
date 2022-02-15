@@ -1,9 +1,9 @@
-#!/usr/bin/env php
 <?php
 use Einenlum\LingueeApi\Factory;
 use \SplFileObject as File;
 
 include 'vendor/autoload.php';
+
 /*
 <?xml version="1.0" encoding="UTF-8"?>
 <results>
@@ -64,7 +64,7 @@ EOS;
    
       $resp = $response->toArray();
    
-      $result = $xml->addChild('result'); 
+      $result = $this->xml->addChild('result'); 
       
       $result->addChild('word', trim($resp['query']));
    
@@ -91,17 +91,13 @@ EOS;
           }
       }
   }
-
-  public function scrape_words(array $words) 
-  { 
-    foreach ($words as $word) {
-      
-       $this->scrape($word);
-    }
+  function print()
+  {
+     echo $this->xml;
   }
 }
 
-
+/*
 // main loop
 //
 if ($argc == 1) {
@@ -116,7 +112,10 @@ if ($argc == 1) {
  $words = array('vernachlässigen', 'verändern');
 
  foreach ($words as $word) {
-   
+
+    sleep(4);
+
     $scraper->scrape($word);
  }
 
+ */
