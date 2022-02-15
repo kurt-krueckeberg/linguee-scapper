@@ -1,5 +1,9 @@
 # HOWTO
 
+## Note Really Useful
+
+Linguee.com will lock you out even with a `sleep(5)` between requests, which makes it impracticable.
+
 ## Install Linguee API
 
 Dependency: [linguee-api](https://github.com/Einenlum/linguee-api)
